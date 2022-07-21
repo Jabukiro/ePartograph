@@ -1,0 +1,43 @@
+[
+    {
+        "id": "0",
+        "name": "Diella LaSoeur",
+        "status": "normal",
+        "data": {
+            "fhr": {
+                "display_name": "FHR",
+                "reading": "152",
+                "next_reading": "2022-07-01T12:30:00.00Z"
+            },
+            "dilation": {
+                "display_name": "Dilation",
+                "reading": "152",
+                "next_reading": "2022-07-01T12:30:00.00Z"
+            },
+            "count": {
+                "display_name": "Count",
+                "reading": "152",
+                "next_reading": "2022-07-01T12:30:00.00Z"
+            }
+        }
+    },
+    {
+        "id": "1",
+        "name": "Random Name",
+        "status": "normal",
+        "data": {
+            "fhr": {
+                "reading": "152",
+                "next_reading": "2022-07-01T13:30:00.00Z"
+            },
+            "dilation": {
+                "reading": "152",
+                "next_reading": "2022-07-01T13:30:00.00Z"
+            },
+            "count": {
+                "reading": "152",
+                "next_reading": "2022-07-01T13:30:00.00Z"
+            }
+        }
+    }
+]
