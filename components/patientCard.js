@@ -4,6 +4,8 @@ import { Button, Surface, Text } from 'react-native-paper';
 import { useTimer } from 'react-timer-hook';
 
 export default function PatientHomeCard({ patient }) {
+  console.log("Patient details: ", patient);
+  const patientStatus = React.useState(patient.status)
   const nextDueReading = getNextDueReading(patient);
   const duetime = new Date(patient.data[nextDueReading].next_reading) - new Date();
   const {
@@ -12,7 +14,7 @@ export default function PatientHomeCard({ patient }) {
   return (
     <>
       <Surface elevation={1} style={styles.item}>
-        <Text variant="titleLarge">{patient.name}</Text>
+        <Text variant="titleLarge">{`${patient.demographics.first_name} ${patient.demographics.surname}`}</Text>
         <View style={{ flex: 1, flexDirection: "row" }}>
           <View style={{ flex: 3, flexDirection: "row" }}>
             <View style={{ flex: 1, alignItems: "center" }}>

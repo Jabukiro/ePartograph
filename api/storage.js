@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+const ACTIVEPATIENTSKEY = "activePatients";
 /**
  * 
  * @param {JSON} value data object to store
@@ -29,6 +30,22 @@ export async function getData(key) {
     }
 }
 
+export async function retrieveActivePatients() {
+    return await getData(ACTIVEPATIENTSKEY);
+}
+export async function updateActivePatients(activePatients) {
+    await storeData(activePatients, ACTIVEPATIENTSKEY);
+}
+export async function addActivePatient(newPatient) {
+    const activePatients = await getData(ACTIVEPATIENTSKEY);
+    if (activePatients === null) {
+        //no existing record
+        await storeData([newPatient], ACTIVEPATIENTSKEY);
+        return;
+    }
+    activePatients.push(newPatient);
+    await storeData(activePatients, ACTIVEPATIENTSKEY);
+}
 const getStorageKey = (key) => {
     return `@${key}`;
 }
