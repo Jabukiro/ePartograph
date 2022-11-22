@@ -10,6 +10,11 @@ const theme = {
   colors: {
     ...DefaultTheme.colors,
     primary: "#005abb",
+    primaryOpacity1: "rgba(0, 90, 187, 0.1)",
+    red: "#fd0103",
+    red1: "#fc8888",
+    red2: "#fc7474",
+    red3: "rgb(252, 179, 179)",
     surfaceVariant: "#d7effb",
     elevation: {
       ...DefaultTheme.colors.elevation,
@@ -24,6 +29,7 @@ const theme = {
     m_05: 5,
     m_1: 10,
     m_2: 20,
+    p_05: 5,
     p_1: 10,
     p_2: 20,
   }
