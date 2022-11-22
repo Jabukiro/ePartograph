@@ -38,7 +38,8 @@ export async function updateActivePatients(activePatients) {
 }
 export async function addActivePatient(newPatient) {
     const activePatients = await getData(ACTIVEPATIENTSKEY);
-    if (activePatients === null) {
+    console.log("activePatients", activePatients);
+    if (activePatients === null || activePatients === undefined) {
         //no existing record
         await storeData([newPatient], ACTIVEPATIENTSKEY);
         return;
