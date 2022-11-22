@@ -3,7 +3,7 @@ import { ScrollView, View } from 'react-native';
 import { Button, Surface, Text, useTheme } from 'react-native-paper';
 import { MainContainer, MyTextInput, MyButton } from '../components';
 import { addActivePatient, toRFC3339 } from '../api';
-export default function RegisterPatient() {
+export default function RegisterPatient({navigation}) {
   const theme = useTheme();
   const [patient, setPatient] = React.useState({
     first_name: "Fridah",
@@ -35,7 +35,7 @@ export default function RegisterPatient() {
         count: newDataPoint("FHR", "140", toRFC3339())
       }
     }
-    addActivePatient(newPatient);
+    addActivePatient(newPatient).then(() => navigation.navigate('Home'));
   }
   return (
     <ScrollView contentContainerStyle={{ minHeight: "100%" }}>

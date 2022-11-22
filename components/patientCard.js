@@ -103,8 +103,9 @@ function DataInput(props) {
       <TextInput
         theme={overdueTheme}
         style={{ flex: 1, height: 40, marginBottom: props.theme.spacing.p_05 }}
-        keyboardType="numeric"
-        onSubmitEditing={() => { console.warn("onSubmitEditing called") }} />
+        keyboardType="number-pad"
+        maxLength={3}
+        onSubmitEditing={props.onDataEntry} />
       <PressableGeneral
         style={
           {

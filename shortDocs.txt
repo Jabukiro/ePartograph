@@ -1,2 +1,8 @@
 Thursday 09/9/2022
 --Added expanded on the patient card
+
+Tuesday 22/11/2022
+--Work Restarted
+--Added redirection to patient listing after registering new patient
+--It's been noted that new patient card in patient listing should be highlighted,
+----expanded, and an instructions should be added to start updating health data points.
