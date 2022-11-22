@@ -6,8 +6,8 @@ import { addActivePatient, toRFC3339 } from '../api';
 export default function RegisterPatient() {
   const theme = useTheme();
   const [patient, setPatient] = React.useState({
-    first_name: "Daniel",
-    surname: "Barihuta",
+    first_name: "Fridah",
+    surname: "Mulenga",
     dob: "11/12/1997",
     marital_status: "single",
     country: "Zambia",
@@ -28,14 +28,13 @@ export default function RegisterPatient() {
   const addPatient = () => {
     const newPatient = {
       demographics: patient,
-      status: "unknown",
+      status: "Attention",
       data: {
-        fhr: newDataPoint("FHR", "...", toRFC3339()),
-        dilation: newDataPoint("FHR", "...", toRFC3339()),
-        count: newDataPoint("FHR", "...", toRFC3339())
+        fhr: newDataPoint("FHR", "180", toRFC3339()),
+        dilation: newDataPoint("FHR", "4", toRFC3339()),
+        count: newDataPoint("FHR", "140", toRFC3339())
       }
     }
-    console.log("New Patient: ", newPatient)
     addActivePatient(newPatient);
   }
   return (
