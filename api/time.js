@@ -1,3 +1,4 @@
+//Takes a Date input and return its corresponding RFC3339 format in UTC+0.
 export function toRFC3339(date = new Date()) {
     const month = date.getUTCMonth() < 10 ? '0' + date.getUTCMonth() : date.getUTCMonth();
     const day = date.getUTCDate() < 10 ? '0' + date.getUTCDate() : date.getUTCDate();
