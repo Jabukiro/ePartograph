@@ -7,7 +7,7 @@ import Patients from '../protoData.json';
 export default function Home() {
   const [activePatients, setActivePatients] = React.useState();
   React.useEffect(() => {
-    retrieveActivePatients().then(value => { console.log("Active Patients List: ", value); setActivePatients(value); });
+    retrieveActivePatients().then(value => { setActivePatients(value); });
   }, [retrieveActivePatients]);
   const renderItem = ({ item, key }) => {
     return <PatientHomeCard patient={item} key={key} />;
