@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { FlatList, View } from 'react-native';
+import { Button, FlatList, View } from 'react-native';
 import { Clock, MainContainer, PatientHomeCard } from '../components';
-import { retrieveActivePatients } from '../api';
+import { __clear, retrieveActivePatients } from '../api';
 import Patients from '../protoData.json';
 
 export default function Home() {
@@ -15,6 +15,10 @@ export default function Home() {
   return (
     <MainContainer>
       <Clock />
+      <Button
+      title='Clear'
+      onPress={() => __clear()}
+      />
       <FlatList
         data={activePatients}
         renderItem={renderItem}

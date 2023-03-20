@@ -50,3 +50,14 @@ export async function addActivePatient(newPatient) {
 const getStorageKey = (key) => {
     return `@${key}`;
 }
+//For development purposes only
+//unsafe to have so maybe remove it for production
+export async function __clear() {
+    console.log("Clearing Active Patients List")
+    try {
+        await storeData(null, ACTIVEPATIENTSKEY);
+        return;
+    } catch (e) {
+        // saving error
+    }
+}
